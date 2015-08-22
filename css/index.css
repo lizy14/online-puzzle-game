@@ -5,3 +5,6 @@ div.page-content{
 header.header-tabs{
 	min-height:0px;
 }
+body {
+    background: #F3E5F5;
+}

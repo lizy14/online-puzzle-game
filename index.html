@@ -18,8 +18,7 @@
             mdl-layout--fixed-tabs" >
   <header class="mdl-layout__header header-tabs">
     <div class="mdl-layout__tab-bar mdl-js-ripple-effect">
-      <a href="#tab-welcome" class="mdl-layout__tab is-active">欢迎</a>
-	  <a href="#tab-puzzle" class="mdl-layout__tab">谜题</a>
+	  <a href="#tab-puzzle" class="mdl-layout__tab is-active">谜题</a>
       <a href="#tab-tools" class="mdl-layout__tab">道具</a>
       <a href="#tab-notes" class="mdl-layout__tab">笔记</a>
 	  <a href="#tab-help" class="mdl-layout__tab">帮助</a>
@@ -28,18 +27,28 @@
 
   </header>
   <main class="mdl-layout__content">
-  
-  
-  
-    <section class="mdl-layout__tab-panel   is-active" id="tab-welcome">
+
+	<section class="mdl-layout__tab-panel is-active" id="tab-puzzle">
       <div class="page-content">
-	  <h6>欢迎来到楼主解谜游戏！</h6>
+	  	  <h6>欢迎来到楼主解谜游戏！</h6>
+	  </div>
+    </section>
+	
+	  	
+    <section class="mdl-layout__tab-panel" id="tab-tools">
+      <div class="page-content">
+	  no tools
 	  </div>
     </section>
 	
 	
+	<section class="mdl-layout__tab-panel" id="tab-help">
+      <div class="page-content">
+	  no help
+	  </div>
+    </section>
 	
-    <section class="mdl-layout__tab-panel" id="tab-notes">
+	<section class="mdl-layout__tab-panel" id="tab-notes">
       <div class="page-content">
 		<div id="user-note-holder" class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
 		  <textarea onchange="storeNotes();" onkeyup="storeNotes();"class="mdl-textfield__input" type="text" rows="10" maxrows="10" id="user-note"></textarea>
@@ -52,25 +61,6 @@
 	  </div>
     </section>
 	
-	
-	
-    <section class="mdl-layout__tab-panel" id="tab-tools">
-      <div class="page-content">
-	  </div>
-    </section>
-	
-	
-	
-	<section class="mdl-layout__tab-panel" id="tab-puzzle">
-      <div class="page-content">
-	  </div>
-    </section>
-	
-	
-	<section class="mdl-layout__tab-panel" id="tab-help">
-      <div class="page-content">
-	  </div>
-    </section>
   </main>
 </div>
 
