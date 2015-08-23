@@ -1,4 +1,4 @@
-setProgressLevel(3);
+initLevel();
 function checkAnswer(){
 	if($('#password')[0].value=="404")
 		gotoNextLevel();

@@ -4,30 +4,26 @@
 
 <link rel="stylesheet" href="css\levels.css">
 <script src="js\levels.js"></script>
-<script src="js\level0.js"></script>
+
 <body>
-<h5>第 0 关 - 入口</h5>
-<h6>欢迎来到楼主闯关游戏~</h6>
+<script>finishingAll();initLevel();</script>
+<h5>通关啦~~</h5>
+<h6>撒花~~</h6>
 
 <div>
-<p id='lastLevel'></p>
-<button id="btnNew" onclick="loadLevel(1);" class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored">
-  新游戏
-</button>
-<button id="btnContinue" onclick="loadLevel(1);" class="mdl-button mdl-js-button mdl-button--raised mdl-button--accent">
-  继续游戏
-</button>
+	<button id="btnNew" onclick="loadLevel(0);" class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored">
+	  重新开始游戏
+	</button>
+	
 </div>
-
 <div id="divJump" >
 <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-	<label class="mdl-textfield__label" for="user-note">您也可以输入关卡编号</label>
+	<label class="mdl-textfield__label" for="user-note">想重温某一关卡吗？</label>
 	<input class="mdl-textfield__input" type="number" id="goto_"></textarea>
 </div>
 <button id="btnJmp" onclick="jumpToLevel($('#goto_')[0].value);" class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored">
 		进入关卡
 </button>
 </div>
-<h6>任何时候“刷新”即可回到本页。</h6>
-<script>loadGame();</script>
+
 </body>
