@@ -2,8 +2,10 @@ var maxLevel = 3;
 function initLevel(){
 	setProgressLevel(getMyLevel());
 	window.onload=function(){
-		if(getMyLevel()!='0')
-			$('h5').html('<a onclick="loadLevel(0)"><img src="img/back.png" /></a>'+$('h5').html());
+		$('h5').html(
+			'<a onclick="loadLevel(0)"><img src="img/home.png" /></a>'+
+			((getMyLevel()!='0')?'<a onclick="loadLevel(parseInt(getMyLevel())-1)"><img src="img/back.png" /></a>':"")
+			+$('h5').html());
 		window.scrollTo(0,0);
 	}
 }
