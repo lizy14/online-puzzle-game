@@ -1,0 +1,29 @@
+<link rel="stylesheet" href="lib\material.min.css">
+<script src="lib\material.min.js"></script>
+<script src="lib\jquery.min.js"></script>
+
+<link rel="stylesheet" href="css\levels.css">
+<script src="js\levels.js"></script>
+
+<body>
+<script>finishingAll();initLevel();</script>
+<h5>通关啦~~</h5>
+<h6>撒花~~</h6>
+
+<div>
+	<button id="btnNew" onclick="loadLevel(0);" class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored">
+	  重新开始游戏
+	</button>
+	
+</div>
+<div id="divJump" >
+<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+	<label class="mdl-textfield__label" for="user-note">想重温某一关卡吗？</label>
+	<input class="mdl-textfield__input" type="number" id="goto_"></textarea>
+</div>
+<button id="btnJmp" onclick="jumpToLevel($('#goto_')[0].value);" class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored">
+		进入关卡
+</button>
+</div>
+
+</body>

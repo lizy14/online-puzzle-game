@@ -6,16 +6,31 @@
 <script src="js\levels.js"></script>
 <script src="js\level0.js"></script>
 <body>
-<h5>第 0 关</h5>
-<h6>欢迎来到楼主解谜游戏！</h6>
-<p id='lastLevel'></p>
+<h5>第 0 关 - 入口</h5>
+<h6>欢迎来到楼主闯关游戏~</h6>
 
-<button id="btnContinue" onclick="loadLevel(1);" class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored">
+<div>
+<p id='lastLevel'></p>
+<button id="btnNew" onclick="loadLevel(1);" class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored">
+  新游戏
+</button>
+<button id="btnContinue" onclick="loadLevel(1);" class="mdl-button mdl-js-button mdl-button--raised mdl-button--accent">
   继续游戏
 </button>
+</div>
 
-<button id="btnNew" onclick="loadLevel(1);" class="mdl-button mdl-js-button mdl-button--raised mdl-button--accent">
-  新游戏
+<div id="divJump" >
+<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+	<label class="mdl-textfield__label" for="user-note">您也可以输入关卡编号</label>
+	<input class="mdl-textfield__input" type="number" id="goto_"></textarea>
+</div>
+<button id="btnJmp" onclick="jumpToLevel($('#goto_')[0].value);" class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored">
+		进入关卡
+</button>
+</div>
+<h6>任何时候“刷新”即可回到本页。</h6>
+<button id="btnClearAll" onclick="clearAll()" class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored">
+		清除存档
 </button>
 <script>loadGame();</script>
 </body>
