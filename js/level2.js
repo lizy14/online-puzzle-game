@@ -3,8 +3,8 @@ var gameOnGoing = false;
 var nTimes = 0;
 var timeStart = 0;
 var timeEnd = 0;
-var fullTime = 10*1000;
-var fullTimes = 30;
+var fullTime = 9*1000;
+var fullTimes = 26;
 var gameStarting = true;
 
 function getNow(){
