@@ -1,6 +1,7 @@
 var maxLevel = 3;
 function initLevel(){
 setProgressLevel(getMyLevel());
+window.scrollTo(0,0);//TODO
 }
 function loadLevel(level){
 	document.location.href='level'+level+'.html';
