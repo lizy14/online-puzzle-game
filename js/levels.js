@@ -27,7 +27,10 @@ function jumpToLevel(level_){
 	if(level_ >= 0 && level_ <= level__)
 		loadLevel(level_);
 	else if(level_ > level__)
-		alert('您还没到过第 '+level_+' 关呢，这样是不可以哒~');
+		if(alreadyFinishedAll())
+			alert('你通关过，应该知道总共只有 '+level__+' 关吧=.=');
+		else
+			alert('您还从没到过这第 '+level_+' 关呢，这样是不可以哒~');
 	else
 		alert('输入不合法哦=.=');
 }
