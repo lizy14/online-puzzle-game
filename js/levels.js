@@ -1,7 +1,11 @@
 var maxLevel = 3;
 function initLevel(){
-setProgressLevel(getMyLevel());
-window.scrollTo(0,0);//TODO
+	setProgressLevel(getMyLevel());
+	window.onload=function(){
+		if(getMyLevel())
+			$('h5').html('<a onclick="loadLevel(0)"><img src="img/back.png" /></a>'+$('h5').html());
+		window.scrollTo(0,0);
+	}
 }
 function loadLevel(level){
 	document.location.href='level'+level+'.html';
@@ -35,7 +39,7 @@ function jumpToLevel(level_){
 		alert('输入不合法哦=.=');
 }
 function gotoNextLevel(){
-	if(confirm('过关啦！')){
+	if(confirm('过关啦！')){}{
 		var level_ = parseInt(getMyLevel())+1;
 		if(level_ <= maxLevel)
 			loadLevel(level_);

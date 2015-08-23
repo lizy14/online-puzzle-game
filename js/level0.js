@@ -1,3 +1,4 @@
+initLevel();
 function loadGame(){
 	var level = getProgressLevel();
 	if(alreadyFinishedAll()){
