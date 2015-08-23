@@ -6,7 +6,7 @@ function loadGame(){
 		$('#btnContinue').attr('onclick','loadLevel('+level+');')
 		
 	}else{
-		$('#lastLevel').html('您没有存档。请开始新游戏~');
+		$('#lastLevel').html('请开始新游戏~ 每当您进入新一关，游戏会自动存档。');
 		$('#btnContinue').hide();
 	}
 }
