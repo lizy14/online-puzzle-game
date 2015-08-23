@@ -15,3 +15,15 @@ function loadGame(){
 	}
 	
 }
+function clearAll(){
+	if(confirm('确定清除所有存档？')){
+		var i;
+		for(i=0; i<localStorage.length; i++){
+			var key_=localStorage.key(i);
+			if(key_.indexOf('onlinePuzzleGame-')===0)
+				localStorage.removeItem(key_);
+		}
+	}
+	alert('存档已清除。')
+	loadLevel(0);
+}
