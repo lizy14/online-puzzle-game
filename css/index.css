@@ -8,3 +8,12 @@ header.header-tabs{
 body {
     background: #F3E5F5;
 }
+div.help-content{
+display:none;
+
+border: solid purple 2px;
+    padding: 10;
+    margin: 10 0 10 10;
+    padding-right: 0px;
+    margin-left: 0px;
+}

@@ -19,5 +19,5 @@ function gotoNextLevel(){
 }
 
 function wrongAnswer(){
-	alert('请再考虑考虑哦~');
+	alert('失败，请再次尝试~');
 }

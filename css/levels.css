@@ -1,3 +1,11 @@
 label{
 font-family: consolas, courier, monospace;
 }
+span.digit{
+font-family: consolas, courier, monospace;
+color:red;
+font-size:xx-large;
+}
+section.choices{
+margin-left:20px;
+}
