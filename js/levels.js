@@ -2,7 +2,7 @@ var maxLevel = 3;
 function initLevel(){
 	setProgressLevel(getMyLevel());
 	window.onload=function(){
-		if(getMyLevel()！='0')
+		if(getMyLevel()!='0')
 			$('h5').html('<a onclick="loadLevel(0)"><img src="img/back.png" /></a>'+$('h5').html());
 		window.scrollTo(0,0);
 	}
