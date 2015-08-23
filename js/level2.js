@@ -24,7 +24,7 @@ function render(){
 	var delta = timeEnd-getNow();
 	if(gameStarting)
 		delta = fullTime;
-	$('#lblTimeLeft').html((delta>=0?(delta/1000):0).toFixed(3));
+	$('#lblTimeLeft').html((delta>=0?(delta/1000):0).toFixed(2));
 }
 
 function check(){
