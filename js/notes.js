@@ -12,10 +12,10 @@ function clearNotes(){
 }
 
 function restoreNotes(){
-	storedUserNotes=localStorage.getItem('userNotes');
+	storedUserNotes=localStorage.getItem('onlinePuzzleGame-userNotes');
 	setNotesContent(storedUserNotes);
 }
 
 function storeNotes(){
-	localStorage.setItem('userNotes',document.getElementById('user-note').value);
+	localStorage.setItem('onlinePuzzleGame-userNotes',document.getElementById('user-note').value);
 }

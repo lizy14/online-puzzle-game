@@ -6,43 +6,45 @@
 <title>解谜游戏</title>
 <link rel="stylesheet" href="lib\material.min.css">
 <script src="lib\material.min.js"></script>
-
+<script src="lib\jquery.min.js"></script>
 
 <link rel="stylesheet" href="css\index.css">
 <script src="js\notes.js"></script>
+<script src="js\help.js"></script>
 </head>
 
 <body>
 
 <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header
-            mdl-layout--fixed-tabs">
-  <header class="mdl-layout__header">
-  <div class="mdl-layout-icon"><img src="img/lock.png"></div>
-    <div class="mdl-layout__header-row">
-      <span class="mdl-layout-title">解谜游戏</span>
-    </div>
+            mdl-layout--fixed-tabs" >
+  <header class="mdl-layout__header header-tabs">
     <div class="mdl-layout__tab-bar mdl-js-ripple-effect">
-      <a href="#tab-welcome" class="mdl-layout__tab is-active">欢迎</a>
-	  <a href="#tab-puzzle" class="mdl-layout__tab">谜题</a>
-      <a href="#tab-tools" class="mdl-layout__tab">道具</a>
+	  <a href="#tab-puzzle" class="mdl-layout__tab is-active">谜题</a>
       <a href="#tab-notes" class="mdl-layout__tab">笔记</a>
+	  <a href="#tab-help" class="mdl-layout__tab">提示</a>
     </div>
 	
 
   </header>
   <main class="mdl-layout__content">
-  
-  
-  
-    <section class="mdl-layout__tab-panel   is-active" id="tab-welcome">
+
+	<section class="mdl-layout__tab-panel is-active" id="tab-puzzle">
       <div class="page-content">
-	  <h6>欢迎来到楼主解谜游戏！</h6>
+		  <iframe id="frmLevelContent" name="frmLevelContent" src="level0.html"  marginwidth=0 marginheight=0 scrolling="no"  onload="this.height=frmLevelContent.document.body.scrollHeight"></iframe>
 	  </div>
     </section>
 	
+	  
 	
 	
-    <section class="mdl-layout__tab-panel" id="tab-notes">
+	<section class="mdl-layout__tab-panel" id="tab-help">
+      <div class="page-content">
+		<div id="help-wrapper"></div>
+		<script>loadHelp();</script>
+	  </div>
+    </section>
+	
+	<section class="mdl-layout__tab-panel" id="tab-notes">
       <div class="page-content">
 		<div id="user-note-holder" class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
 		  <textarea onchange="storeNotes();" onkeyup="storeNotes();"class="mdl-textfield__input" type="text" rows="10" maxrows="10" id="user-note"></textarea>
@@ -55,19 +57,6 @@
 	  </div>
     </section>
 	
-	
-	
-    <section class="mdl-layout__tab-panel" id="tab-tools">
-      <div class="page-content">
-	  </div>
-    </section>
-	
-	
-	
-	<section class="mdl-layout__tab-panel" id="tab-puzzle">
-      <div class="page-content">
-	  </div>
-    </section>
   </main>
 </div>
 

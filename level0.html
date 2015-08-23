@@ -1,0 +1,21 @@
+<link rel="stylesheet" href="lib\material.min.css">
+<script src="lib\material.min.js"></script>
+<script src="lib\jquery.min.js"></script>
+
+<link rel="stylesheet" href="css\levels.css">
+<script src="js\levels.js"></script>
+<script src="js\level0.js"></script>
+<body>
+<h5>第 0 关</h5>
+<h6>欢迎来到楼主解谜游戏！</h6>
+<p id='lastLevel'></p>
+
+<button id="btnContinue" onclick="loadLevel(1);" class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored">
+  继续游戏
+</button>
+
+<button id="btnNew" onclick="loadLevel(1);" class="mdl-button mdl-js-button mdl-button--raised mdl-button--accent">
+  新游戏
+</button>
+<script>loadGame();</script>
+</body>
