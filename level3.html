@@ -10,16 +10,15 @@
 <h3>BOOM!!!!</h3> 
 <p>看起来是刚才那个被戳了太多次的按钮触发了一些机关。</p>
 <p>强光和巨响之后，你发现已身处一间密室之中。
-其实算不上密室，因为这个房间有门，只是锁的很死——是数字密码锁。
-键盘输入，不知道密码一共多少位。</p>
+其实算不上密室，因为这个房间有门，只是锁的很死——是 3 位的数字密码。</p>
 <p>房间里似乎什么都没有。没有窗户。
 没有桌子，没有椅子，除了头顶一个白炽灯泡，没有任何家具。
-天花板和墙壁都是洁白的，什么都看不出来。</p>
+天花板和墙壁都是洁白的，什么都没有，什么都看不出来。</p>
 <p>而木质地板上的纹理看起来依稀可以辨出 <code>HTTP</code> 四个字母。</p>
 <p>房间里到底有没有线索呢……？</p>
 <div id="user-note-holder" class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
 	<label class="mdl-textfield__label" for="user-note">线索找到了么？请输入数字密码：</label>
-	<input class="mdl-textfield__input" type="tel" pattern="\d+" id="password"></textarea>
+	<input class="mdl-textfield__input" type="tel" pattern="\d\d\d" id="password"></textarea>
 </div>
 <button onclick="checkAnswer();" class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored">尝试开门</button>
 </body>
