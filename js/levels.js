@@ -1,23 +1,40 @@
 var maxLevel = 4;
-function initLevel(){
+var currentLevel = 0;
+function initLevel(){	
+
+	if(getMyLevel()>=getProgressLevel())
+		$('.btnNext').hide();
+	else
+		$('.btnNext').show();
+	if(getMyLevel()<=0)
+		$('.btnPrev').hide();
+	else
+		$('.btnPrev').show();
+		
+	window.scrollTo(0,0);
 	
-	window.onload=function(){
-		$('h5').html(
-			'<a onclick="loadLevel(0)"><img src="img/home.png" /></a>'+
-			'<a onclick="loadLevel(parseInt(getMyLevel())-1)"><img src="img/previous.png" /></a>'
-			+((getMyLevel()<getProgressLevel())?'<a onclick="loadLevel(parseInt(getMyLevel())+1)"><img src="img/next.png" /></a>':"")
-			+$('h5').html());
-		window.scrollTo(0,0);
-	}
 	if(getMyLevel()!='0' && (getMyLevel()>=getProgressLevel()))
 		setProgressLevel(getMyLevel());
 }
 function loadLevel(level){
+	if(currentLevel==2)
+		cleanUp();
+	console.log('loading level '+level);
 	if(level < 0)level = 0;
-	document.location.href='level'+level+'.html';
+	currentLevel = level;
+	
+	
+	$.get('level'+level+'.html', function( data ) {
+	  $( "#levelHTML" ).html( data );
+	  componentHandler.upgradeAllRegistered();
+	  $.get('js\\level'+level+'.js', function( data ) {
+		  $( "#levelJS" ).html( data );
+		});
+	});
+
 }
 function getMyLevel(){
-	return (document.location.href.match(/level(\d|F).html/)[1]);
+	return currentLevel;
 }
 function setProgressLevel(level){
 	localStorage.setItem('onlinePuzzleGame-level', level);
@@ -52,7 +69,6 @@ function gotoNextLevel(){
 		else
 			loadLevel('F');
 	}
-		
 }
 function wrongAnswer(){
 	alert('失败，请再次尝试~');
