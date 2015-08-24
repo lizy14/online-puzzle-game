@@ -1,16 +1,19 @@
 var maxLevel = 4;
 function initLevel(){
-	if(getMyLevel()!='0')
-		setProgressLevel(getMyLevel());
+	
 	window.onload=function(){
 		$('h5').html(
 			'<a onclick="loadLevel(0)"><img src="img/home.png" /></a>'+
-			((getMyLevel()!='0')?'<a onclick="loadLevel(parseInt(getMyLevel())-1)"><img src="img/back.png" /></a>':"")
+			'<a onclick="loadLevel(parseInt(getMyLevel())-1)"><img src="img/previous.png" /></a>'
+			+((getMyLevel()<getProgressLevel())?'<a onclick="loadLevel(parseInt(getMyLevel())+1)"><img src="img/next.png" /></a>':"")
 			+$('h5').html());
 		window.scrollTo(0,0);
 	}
+	if(getMyLevel()!='0' && (getMyLevel()>=getProgressLevel()))
+		setProgressLevel(getMyLevel());
 }
 function loadLevel(level){
+	if(level < 0)level = 0;
 	document.location.href='level'+level+'.html';
 }
 function getMyLevel(){
