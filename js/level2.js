@@ -1,4 +1,5 @@
 initLevel();
+
 var gameOnGoing = false;
 var nTimes = 0;
 var timeStart = 0;
@@ -6,6 +7,9 @@ var timeEnd = 0;
 var fullTime = 9*1000;
 var fullTimes = 26;
 var gameStarting = true;
+
+var intervalID = setInterval("render()",1);
+var timeoutID;
 
 function getNow(){
 	var now=new Date();
@@ -20,6 +24,7 @@ function checkAnswer(){
 }
 
 function render(){
+	
 	$('#lblClickCount').html(nTimes);
 	var delta = timeEnd-getNow();
 	if(gameStarting)
@@ -39,7 +44,7 @@ function check(){
 		}
 	}
 	if(gameOnGoing)
-		setTimeout("check()",1);	
+		timeoutID = setTimeout("check()",1);	
 }
 function buttonClicked(){
 	gameStarting = false;
@@ -52,4 +57,8 @@ function buttonClicked(){
 		timeEnd = timeStart + fullTime;	
 		check();
 	}
+}
+function cleanUp(){
+	 clearTimeout(timeoutID);
+	 clearInterval(intervalID);
 }

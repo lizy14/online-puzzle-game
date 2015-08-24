@@ -9,11 +9,13 @@
 <script src="lib\jquery.min.js"></script>
 
 <link rel="stylesheet" href="css\index.css">
+<link rel="stylesheet" href="css\levels.css">
 <script src="js\notes.js"></script>
 <script src="js\help.js"></script>
+<script src="js\levels.js"></script>
 </head>
 
-<body onload="">
+<body onload="loadLevel(0);">
 
 <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header
             mdl-layout--fixed-tabs" >
@@ -30,10 +32,13 @@
 
 	<section class="mdl-layout__tab-panel is-active" id="tab-puzzle">
       <div class="page-content">
-		  <iframe id="frmLevelContent" name="frmLevelContent" src="level0.html"  
-			  marginwidth=0 marginheight=0 scrolling="no" 
-			  onload="this.height=frmLevelContent.document.body.scrollHeight;">
-		  </iframe>
+		<h5><div id="navIcons">
+			<div class="wrapper"><div onclick="loadLevel(0)"><img src="img/home.png" /></div></div>
+			<div class="wrapper"><div class="btnPrev" onclick="loadLevel(parseInt(getMyLevel())-1)"><img src="img/previous.png" /></div></div>
+			<div class="wrapper"><div class="btnNext" onclick="loadLevel(parseInt(getMyLevel())+1)"><img src="img/next.png" /></div></div>
+		</div></h5>
+		<div id="levelHTML"></div>
+		<script id="levelJS"></script>
 	  </div>
     </section>
 	
