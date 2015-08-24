@@ -1,3 +1,4 @@
+initLevel();
 function loadGame(){
 	var level = getProgressLevel();
 	if(alreadyFinishedAll()){
@@ -16,7 +17,7 @@ function loadGame(){
 	
 }
 function clearAll(){
-	if(confirm('确定清除所有存档？')){
+	if(confirm('确定清除本游戏所有数据（包括进度存档、笔记内容）？')){
 		var i;
 		for(i=0; i<localStorage.length; i++){
 			var key_=localStorage.key(i);
@@ -24,6 +25,6 @@ function clearAll(){
 				localStorage.removeItem(key_);
 		}
 	}
-	alert('存档已清除。')
+	alert('数据已清除。')
 	loadLevel(0);
 }
