@@ -1,6 +1,7 @@
-var maxLevel = 3;
+var maxLevel = 4;
 function initLevel(){
-	setProgressLevel(getMyLevel());
+	if(getMyLevel()!='0')
+		setProgressLevel(getMyLevel());
 	window.onload=function(){
 		$('h5').html(
 			'<a onclick="loadLevel(0)"><img src="img/home.png" /></a>'+
