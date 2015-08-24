@@ -1,5 +1,6 @@
 initLevel();
-function loadGame(){
+loadProgress();
+function loadProgress(){
 	var level = getProgressLevel();
 	if(alreadyFinishedAll()){
 		$('#lastLevel').html('您已经通关过了。');

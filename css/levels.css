@@ -12,3 +12,17 @@ margin-left:20px;
 div.button-container{
 margin-top: 20px;
 }
+#navIcons .wrapper{
+min-height: 24px;
+width: 24px;
+min-width: 24px;
+margin-right: 5px;
+float:left;
+}
+#navIcons img{
+width: 24px;
+height: 24px;
+}
+#navIcons .btnPrev,.btnNext{
+display:none;
+}
