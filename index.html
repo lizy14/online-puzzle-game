@@ -15,7 +15,7 @@
 <script src="js\levels.js"></script>
 </head>
 
-<body onload="loadLevel(0);">
+<body onload="loadLevel(0);loadHelp();restoreNotes();">
 
 <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header
             mdl-layout--fixed-tabs" >
@@ -48,7 +48,6 @@
 	<section class="mdl-layout__tab-panel" id="tab-help">
       <div class="page-content">
 		<div id="help-wrapper"></div>
-		<script>loadHelp();</script>
 	  </div>
     </section>
 	
@@ -61,7 +60,6 @@
 		<div>
 			<button onclick="clearNotes();" class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored">清除</button>
 		</div>
-		<script>restoreNotes();</script>
 	  </div>
     </section>
 	
