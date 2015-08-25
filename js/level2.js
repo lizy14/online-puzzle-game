@@ -1,5 +1,3 @@
-initLevel();
-
 var gameOnGoing = false;
 var nTimes = 0;
 var timeStart = 0;
