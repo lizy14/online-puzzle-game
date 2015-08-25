@@ -28,7 +28,7 @@ function loadLevel(level){
 	  $( "#levelHTML" ).html( data );
 	  componentHandler.upgradeAllRegistered();
 	  $.get('js\\level'+level+'.js', function( data ) {
-		  $( "#levelJS" ).html( data );
+		  eval(data);
 		});
 	});
 
