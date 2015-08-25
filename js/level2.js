@@ -1,5 +1,3 @@
-initLevel();
-
 var gameOnGoing = false;
 var nTimes = 0;
 var timeStart = 0;
@@ -12,7 +10,7 @@ var intervalID = setInterval("render()",1);
 var timeoutID;
 
 function getNow(){
-	var now=new Date();
+	now = new Date();
 	return now.getTime();
 }
 
