@@ -10,7 +10,7 @@ var intervalID = setInterval("render()",1);
 var timeoutID;
 
 function getNow(){
-	var now=new Date();
+	now = new Date();
 	return now.getTime();
 }
 

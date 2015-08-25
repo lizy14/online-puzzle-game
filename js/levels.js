@@ -1,5 +1,6 @@
 var maxLevel = 5;
 var currentLevel = 0;
+var now=new Date();
 function initLevel(){	
 
 	if(getMyLevel()>=getProgressLevel())

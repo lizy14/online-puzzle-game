@@ -26,3 +26,8 @@ height: 24px;
 #navIcons .btnPrev,.btnNext{
 display:none;
 }
+div.a-piece-of-paper{
+    border: solid 2px;
+    padding: 10px;
+	margin: 0 0 16px;
+}
