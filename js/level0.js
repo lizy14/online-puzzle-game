@@ -1,4 +1,3 @@
-initLevel();
 loadProgress();
 function loadProgress(){
 	var level = getProgressLevel();
