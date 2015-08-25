@@ -1,8 +1,10 @@
-var maxLevel = 4;
+var maxLevel = 5;
 var currentLevel = 0;
 function initLevel(){	
 
 	if(getMyLevel()>=getProgressLevel())
+		$('.btnNext').hide();
+	else if(getMyLevel()=='F')
 		$('.btnNext').hide();
 	else
 		$('.btnNext').show();
@@ -34,6 +36,12 @@ function loadLevel(level){
 	});
 
 }
+function navPrev(){
+	loadLevel(getMyLevel()=='F'?maxLevel:parseInt(getMyLevel())-1);
+}
+function navNext(){
+	loadLevel(getMyLevel()==maxLevel?'F':parseInt(getMyLevel())+1);
+}
 function getMyLevel(){
 	return currentLevel;
 }
@@ -44,10 +52,7 @@ function getProgressLevel(){
 	return (localStorage.getItem('onlinePuzzleGame-level') || '0');
 }
 function alreadyFinishedAll(){
-	return (localStorage.getItem('onlinePuzzleGame-finishedAll') || false);
-}
-function finishingAll(){
-	localStorage.setItem('onlinePuzzleGame-finishedAll','true');
+	return (getProgressLevel()=='F');
 }
 function jumpToLevel(level_){
 	var level_ = parseInt(level_);
